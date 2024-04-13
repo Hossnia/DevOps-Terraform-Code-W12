@@ -8,16 +8,17 @@ data "aws_ami" "example" {
     values = ["amzn2-ami-kernel-5.10-hvm*-x86_64-ebs"]
   }
 
-  filter {
-    name   = "root-device-type"
-    values = ["ebs"]
-  }
+#   filter {
+#     name   = "root-device-type"
+#     values = ["ebs"]
+#   }
 
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
+#   filter {
+#     name   = "virtualization-type"
+#     values = ["hvm"]
+#   }
 }
+
 
 data "aws_instance" "ec21" {
   instance_id = "i-01b53bed94824d0ca"
